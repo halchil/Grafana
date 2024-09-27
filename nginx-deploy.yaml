@@ -8,7 +8,7 @@ services:
     ports:
       - "80:80"  # 外部アクセスをポート80で受け取る
     volumes:
-      - ./grafana.conf:/etc/nginx/conf.d/:ro  # カスタムNginx設定ファイル デフォルトで存在する nginx.confとdefault.confは書き換えない　もしかしたらderfault.confへの書き換えはOKかも
+      - ./grafana.conf:/etc/nginx/conf.d/grafana.conf:ro  # カスタムNginx設定ファイル デフォルトで存在する nginx.confとdefault.confは書き換えない　もしかしたらderfault.confへの書き換えはOKかも
     #depends_on:
     #s  - grafana
     restart: unless-stopped
