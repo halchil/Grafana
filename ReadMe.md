@@ -17,3 +17,18 @@ docker network create --subnet=172.10.10.0/24 --gateway=172.10.10.1 ecosystem
 docker volume create grafana-data
 ```
 
+## hostsファイル登録
+
+`val-ecosystem.com`
+
+
+# デプロイ
+
+```
+docker-compose -f grafana.yaml up -d
+docker-compose -f nginx-deploy.yaml up -d
+```
+
+# 確認
+
+IPアドレス
