@@ -25,8 +25,8 @@ docker volume create grafana-data
 # デプロイ
 
 ```
-docker-compose -f grafana.yaml up -d
-docker-compose -f nginx-deploy.yaml up -d
+docker compose -f grafana-deploy.yaml up -d
+docker compose -f nginx-deploy.yaml up -d
 ```
 
 # 確認
