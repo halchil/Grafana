@@ -6,8 +6,10 @@ services:
     container_name: grafana
     volumes:
       - grafana-data:/var/lib/grafana
+      - ./custom_grafana.ini:/etc/grafana/grafana_custom.ini  # 新しいiniファイルをマウント
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=adminpassword  # Grafana管理者のパスワード設定
+      - GF_CONFIG_FILE=/etc/grafana/grafana_custom.ini  # カスタム設定ファイルを指定
     restart: unless-stopped
     networks:  # ここでネットワークを指定
       - ecosystem
