@@ -4,4 +4,4 @@ global:
 scrape_configs:
   - job_name: 'nginx'
     static_configs:
-      - targets: ['nginx:80']  # Nginxのコンテナ名とポート
+      - targets: ['nginx-exporter:9113']  # Nginxのコンテナ名とポート

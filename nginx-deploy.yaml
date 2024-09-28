@@ -16,6 +16,13 @@ services:
     networks:  # ここでネットワークを指定
       - ecosystem
 
+    nginx-exporter:
+    image: nginx/nginx-prometheus-exporter:latest
+    ports:
+      - "9113:9113"
+    command:
+      - '-nginx.scrape-uri=http://nginx:80/stub_status'
+
 networks:
   ecosystem:
     external: true  # 既に作成されたネットワークを使用する場合
