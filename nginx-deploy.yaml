@@ -16,7 +16,7 @@ services:
     networks:  # ここでネットワークを指定
       - ecosystem
 
-    nginx-exporter:
+  nginx-exporter:
     image: nginx/nginx-prometheus-exporter:latest
     ports:
       - "9113:9113"
