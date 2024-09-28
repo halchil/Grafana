@@ -9,6 +9,8 @@ services:
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=adminpassword  # Grafana管理者のパスワード設定
     restart: unless-stopped
+    networks:  # ここでネットワークを指定
+      - ecosystem
 
 networks:
   ecosystem:

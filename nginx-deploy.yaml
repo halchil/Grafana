@@ -12,6 +12,8 @@ services:
     #depends_on:
     #s  - grafana
     restart: unless-stopped
+    networks:  # ここでネットワークを指定
+      - ecosystem
 
 networks:
   ecosystem:
